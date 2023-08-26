@@ -110,7 +110,7 @@ export const HomeApp = () => {
                                     }
                                 </div>
                                 <br />
-                                <span className='monto'>{selectSimple}: {calcularSimple().toFixed(2)}</span>
+                                <span className='monto'>{selectSimple}: {calcularSimple().toFixed(4)}</span>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@ export const HomeApp = () => {
                                     }
                                 </div>
                                 <br />
-                                <span className='monto'>{selectCompuesto}: {calcularCompuesto().toFixed(2)}</span>
+                                <span className='monto'>{selectCompuesto}: {calcularCompuesto().toFixed(4)}</span>
                             </div>
                         </div>
                     </div>
