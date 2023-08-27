@@ -53,25 +53,26 @@ export const HomeApp = () => {
         }
         if (selectCompuesto === 'Monto') return capital * Math.pow(1 + (tasa / 100), time);
         if (selectCompuesto === 'Capital') return monto / Math.pow(1 + (tasa / 100), time);
-        if (selectCompuesto === 'Tasa') return (Math.pow(monto / capital, 1 / time) - 1)*100;
+        if (selectCompuesto === 'Tasa') return (Math.pow(monto / capital, 1 / time) - 1) * 100;
         if (selectCompuesto === 'Tiempo') return Math.log(monto / capital) / Math.log(1 + (tasa / 100));
 
     }
     return (
         <>
+            <br />
             <div className="container">
-                <h1>Tasas de interes</h1>
+                <h2>Tasas de interes</h2>
                 <hr />
                 <div className="row">
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
-                                <h4 className="text-center">Interés simple</h4>
+                                <h5 className="text-center">Interés simple</h5>
                             </div>
                             <div className="card-body">
                                 <div>
-                                    <label>¿Qué quieres calcular?</label>
-                                    <select onChange={(x) => setSelectSimple(x.target.value)}>
+                                    <label>¿Qué quieres calcular? </label>
+                                    <select className='ms-2' onChange={(x) => setSelectSimple(x.target.value)}>
                                         {optionSimple.map(x => (<option key={x} value={x}>{x}</option>))}
                                     </select>
                                 </div>
@@ -117,12 +118,12 @@ export const HomeApp = () => {
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header">
-                                <h4 className="text-center">Interés cumpuesto</h4>
+                                <h5 className="text-center">Interés cumpuesto</h5>
                             </div>
                             <div className="card-body">
                                 <div>
                                     <label>¿Qué quieres calcular?</label>
-                                    <select onChange={(x) => setSelectCompuesto(x.target.value)}>
+                                    <select className='ms-2' onChange={(x) => setSelectCompuesto(x.target.value)}>
                                         {optionCompuesto.map(x => (<option key={x} value={x}>{x}</option>))}
                                     </select>
                                 </div>
