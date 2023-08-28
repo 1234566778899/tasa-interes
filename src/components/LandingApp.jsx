@@ -34,7 +34,7 @@ export const LandingApp = () => {
                         <div className="col-md-6">
                             <p>Resuelve ejercicios de finanzas de manera facil</p>
                             <h1 style={{ fontWeight: 'bolder' }}>Simplificando las finanzas, un cálculo a la vez</h1>
-                            <p>Descubre el poder de las finanzas a través de nuestra Calculadora Esencial. Desde tasas de interés hasta análisis de activos, adquiere habilidades prácticas y desarrolla una aplicación para calcular planes de pagos. Tu viaje hacia la maestría financiera comienza aquí.</p>
+                            <p>Descubre el poder de las finanzas a través de una Calculadora Esencial. Desde tasas de interés hasta análisis de activos, adquiere habilidades prácticas y desarrolla una aplicación para calcular planes de pagos. Tu viaje hacia la maestría financiera comienza aquí.</p>
                             <button className='btn-ir' onClick={() => navigate('/home')}>Ir a la app</button>
                         </div>
                         <div className="col-md-6">
@@ -86,7 +86,7 @@ export const LandingApp = () => {
             <br />
             <br />
             <div className='footer'>         
-                <p className='text-center'>Created by: Carlos Ordaz H.</p>
+                <p className='text-center'>Created by Carlos Ordaz H.</p>
             </div>
         </>
     )
