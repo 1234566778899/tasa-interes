@@ -18,7 +18,7 @@ export const NavApp = () => {
                                 <a class="nav-link active" onClick={()=>navigate('/landing')} style={{cursor:'pointer'}}>Sobre la App</a>
                             </li>
                             <li class="nav-item">
-                                <button class="btn-link" onClick={()=>navigate('/home')}>Ir a App</button>
+                                <button class="btn-link" onClick={()=>navigate('/home')}>Ir a la App</button>
                             </li>
                         </ul>
 
