@@ -47,8 +47,9 @@ export const HomeApp = () => {
         },
     ])
 
-    const activar = (id, active) => {
-        settemas(arr => arr.map(x => x.id === id ? { ...x, active: !active } : x))
+    const activar = (id) => {
+        settemas(arr => arr.map(x => ({ ...x, active: false })));
+        settemas(arr => arr.map(x => x.id === id ? { ...x, active: true } : x))
     }
     return (
         <>
@@ -57,7 +58,7 @@ export const HomeApp = () => {
                 <div className="temas">
                     {
                         temas.map(tema => (
-                            <span key={tema.id} onClick={() => activar(tema.id, tema.active)} className={tema.active ? 'active' : 'desactive'}>{tema.name}</span>
+                            <span key={tema.id} onClick={() => activar(tema.id)} className={tema.active ? 'active' : 'desactive'}>{tema.name}</span>
                         ))
                     }
                 </div>
