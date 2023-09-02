@@ -96,10 +96,24 @@ option:hover {
     width: 50%;
     animation: mover 5s infinite linear;
 }
-
+.content-main p{
+    font-size: 1.2rem;
+}
+.content-main h1{
+    font-size: 3rem;
+}
 @media screen and (max-width:720px) {
     .img-main {
         display: none;
+    }
+    .landing-fondo{
+        height: auto;
+    }
+    .content-boton{
+        text-align: center;
+    }
+    .content-main{
+        text-align: center;
     }
 }
 

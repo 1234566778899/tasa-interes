@@ -48,8 +48,7 @@ export const HomeApp = () => {
     ])
 
     const activar = (id) => {
-        settemas(arr => arr.map(x => ({ ...x, active: false })));
-        settemas(arr => arr.map(x => x.id === id ? { ...x, active: true } : x))
+        settemas(arr => arr.map(x => ({ ...x, active: x.id === id })))
     }
     return (
         <>

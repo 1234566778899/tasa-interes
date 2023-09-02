@@ -23,15 +23,10 @@ export const LandingApp = () => {
     ])
     return (
         <>
-            <div className='landing-fondo'>
+            <div className='landing-fondo d-flex align-items-center'>
                 <div className="container mb-5">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-6 content-main">
                             <p>Resuelve ejercicios de finanzas de manera facil</p>
                             <h1 style={{ fontWeight: 'bolder' }}>Simplificando las finanzas, un cálculo a la vez</h1>
                             <p>Descubre el poder de las finanzas a través de una Calculadora Esencial. Desde tasas de interés hasta análisis de activos, adquiere habilidades prácticas y desarrolla una aplicación para calcular planes de pagos. Tu viaje hacia la maestría financiera comienza aquí.</p>
@@ -44,9 +39,6 @@ export const LandingApp = () => {
                         </div>
                     </div>
                 </div>
-                <br />
-                <br />
-                <br />
             </div>
             <div className='section-temas'>
                 <div className="container">
@@ -85,7 +77,7 @@ export const LandingApp = () => {
             </div>
             <br />
             <br />
-            <div className='footer'>         
+            <div className='footer'>
                 <p className='text-center'>Created by Carlos Ordaz H.</p>
             </div>
         </>
