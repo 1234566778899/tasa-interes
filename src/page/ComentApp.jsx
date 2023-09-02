@@ -1,5 +1,5 @@
-import { collection, addDoc } from 'firebase/firestore'
-import React, { useRef, useState } from 'react'
+import { collection, addDoc,getDocs } from 'firebase/firestore'
+import React, {  useEffect, useState } from 'react'
 import db from '../firebase/config'
 
 
@@ -7,6 +7,20 @@ export const ComentApp = () => {
     const [comentario, setComentario] = useState('')
     const [mensaje, setMensaje] = useState('Enviar');
     const [mensajeAlerta, setMensajeAlerta] = useState('');
+    const [numComentarios, setnumComentarios] = useState(0);
+    const obtenerCantidadComentarios = async () => {
+        try {
+            const comentariosSnapshot = await getDocs(collection(db, 'comments'));
+            const cantidadComentarios = comentariosSnapshot.size;
+            setnumComentarios(cantidadComentarios);
+        } catch (error) {
+            setMensajeAlerta('Error al obtener la cantidad de comentarios');
+        }
+    };
+
+    useEffect(() => {
+        obtenerCantidadComentarios();
+    }, []);
     const agregarComentario = async () => {
         setMensaje('Enviando..');
         if (comentario.trim() != "") {
@@ -17,6 +31,7 @@ export const ComentApp = () => {
                 });
                 setComentario('');
                 setMensajeAlerta('Gracias por tu comentario!!')
+                obtenerCantidadComentarios();
             } catch (e) {
                 setMensajeAlerta('Error');
             }
@@ -35,7 +50,7 @@ export const ComentApp = () => {
                                     <h4>Deja tu comentario</h4>
                                 </div>
                                 <div className="card-body">
-                                    <span style={{ color: '#373737' }}>447 Comentarios</span>
+                                    <span style={{ color: '#373737' }}>{numComentarios} Comentarios</span>
                                     <textarea placeholder='Agregar un comentario' value={comentario} onChange={(e) => setComentario(e.target.value)} className='inp-comentario'></textarea>
                                     <div className="text-end">
                                         <button className='btn-send-comentario' onClick={() => agregarComentario()}>{mensaje}</button>
