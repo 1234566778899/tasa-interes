@@ -7,8 +7,8 @@ export const LandingApp = () => {
     const [temas, settemas] = useState([
         { nombre: 'Tasa Simple', estado: true },
         { nombre: 'Tasa Compuesto', estado: true },
-        { nombre: 'Tasa Nominal y/o Efectiva', estado: false },
-        { nombre: 'Cálculo con equivalencias de tasas de interés', estado: false },
+        { nombre: 'Tasa Nominal y/o Efectiva', estado: true },
+        { nombre: 'Cálculo con equivalencias de tasas de interés', estado: true },
         { nombre: 'Cálculo de flujos de fondos', estado: false },
         { nombre: 'Tasa descontada', estado: false },
         { nombre: 'Teoría de rentas', estado: false },
