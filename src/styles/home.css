@@ -96,23 +96,29 @@ option:hover {
     width: 50%;
     animation: mover 5s infinite linear;
 }
-.content-main p{
+
+.content-main p {
     font-size: 1.2rem;
 }
-.content-main h1{
+
+.content-main h1 {
     font-size: 3rem;
 }
+
 @media screen and (max-width:720px) {
     .img-main {
         display: none;
     }
-    .landing-fondo{
+
+    .landing-fondo {
         height: auto;
     }
-    .content-boton{
+
+    .content-boton {
         text-align: center;
     }
-    .content-main{
+
+    .content-main {
         text-align: center;
     }
 }
@@ -169,4 +175,39 @@ option:hover {
     padding: 10px;
     background-color: rgb(39, 39, 39);
     color: rgb(235, 234, 234)
+}
+
+.inp-comentario {
+    width: 100%;
+    border: 1px solid gray;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-send-comentario {
+    border: none;
+    padding: 5px 25px;
+    border-radius: 5px;
+    background-color: #373737;
+    color: white;
+}
+
+.btn-send-comentario:hover {
+    background-color: #545454;
+}
+
+.mensaje-alerta {
+    background-color: #e0e0e0;
+    color: rgb(41, 41, 41);
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.mensaje-alerta>button {
+    border: none;
 }

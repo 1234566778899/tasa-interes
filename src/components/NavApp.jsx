@@ -43,7 +43,7 @@ export const NavApp = () => {
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             {
                                 enlaces.map(x => (
-                                    <li className="nav-item" key={x.id}>
+                                    <li className="nav-item" key={x.name}>
                                         <a className={x.active ? 'nav-link active' : 'nav-link'} onClick={() => cambiarPagina(x.link)} style={{ cursor: 'pointer' }}>{x.name}</a>
                                     </li>
                                 ))
