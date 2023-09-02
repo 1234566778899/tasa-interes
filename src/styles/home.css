@@ -7,6 +7,31 @@
     flex: 1;
 }
 
+.temas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.temas span {
+    padding: 5px 10px;
+    border: 1px solid #D0DAE5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.temas .desactive {
+    background-color: #F5F8FA;
+}
+
+.temas .active {
+    background-color: #def3f6;
+}
+
+.temas span:hover {
+    background-color: #def3f6;
+}
+
 input {
     outline: none;
     border: 1px solid #CBD6E2;
@@ -74,7 +99,7 @@ option:hover {
 
 @media screen and (max-width:720px) {
     .img-main {
-       display: none;
+        display: none;
     }
 }
 

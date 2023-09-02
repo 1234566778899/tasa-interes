@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { HomeApp } from './components/HomeApp';
+import { HomeApp } from './page/HomeApp';
+import { LandingApp } from './page/LandingApp';
 import { NavApp } from './components/NavApp';
-import { LandingApp } from './components/LandingApp';
+
 
 
 
