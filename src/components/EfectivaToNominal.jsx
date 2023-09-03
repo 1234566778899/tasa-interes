@@ -85,7 +85,7 @@ export const EfectivaToNominal = () => {
                     </label>
                 </div>
                 <br />
-                <span className='monto'>Resultado: {calcularNominal().toFixed(2)}</span>
+                <span className='monto'>Resultado: {calcularNominal().toFixed(4)}</span>
             </div>
         </div>
     )

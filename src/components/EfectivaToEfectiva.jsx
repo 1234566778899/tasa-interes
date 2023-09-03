@@ -76,7 +76,7 @@ export const EfectivaToEfectiva = () => {
                     </label>
                 </div>
                 <br />
-                <span className='monto'>Resultado: {calcularEfectiva().toFixed(2)}</span>
+                <span className='monto'>Resultado: {calcularEfectiva().toFixed(4)}</span>
             </div>
         </div>
     )
